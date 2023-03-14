@@ -199,6 +199,8 @@ a.nav-item:hover {
 	color: white;
 	text-decoration: none;
 	border-radius: 5px;
+	margin-top: 3px;
+	transition: background-color 0.2s ease-in-out;
 }
 
 .custom-link:hover {
@@ -214,6 +216,7 @@ a.nav-item:hover {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+	margin-top: 3px;
     transition: background-color 0.2s ease-in-out;
 }
 

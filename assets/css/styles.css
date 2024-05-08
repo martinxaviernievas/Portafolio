@@ -66,6 +66,7 @@ a.nav-item:hover {
 	max-width: 100%;
 	max-height: 55px;
 	margin-bottom: 15px;
+	background-color: #052D3D;
 }
 
 .project-figure {
@@ -154,11 +155,6 @@ a.nav-item:hover {
 	transition: transform 0.3s;
 }
 
-
-
-
-
-
 .skills {
 	display: flex;
 	flex-wrap: wrap;
@@ -241,27 +237,46 @@ a.nav-item:hover {
 	color: white;
 }
 
-.caja{
+.caja {
     width: 90%;
-    position: relative;
+    max-width: 400px; /* Limita el ancho máximo del contenedor para evitar que se expanda demasiado */
     margin: 0 auto;
+    background-color: #063647;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .caja h4 {
 	font-size: 24px;
 	font-weight: bold;
 	color: #a5a8b6; /* Color turquesa, puedes cambiarlo según tu preferencia */
+	background-color: #052D3D;
 	margin-bottom: 20px; /* Ajusta el espacio entre el título y el formulario */
   }
 
   form {
     max-width: 400px;
     margin: 0 auto;
+    border-radius: 5px; /* Bordes redondeados para el formulario */
+    padding: 0; /* Elimina el relleno */
+    background-color: transparent; /* Hace que el fondo del formulario sea transparente */
+}
+
+/* Estilos para los campos de entrada y área de texto */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 5px;
-    display: flex; /* Para colocar el formulario en línea */
-    flex-direction: column; /* Para colocar los elementos uno encima del otro */
-    align-items: flex-start; /* Para alinear los elementos a la izquierda */
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
 }
 
 form label,
@@ -272,10 +287,13 @@ form legend {
     font-weight: 1000;
 }
 
-.h4i{
-	text-align: center;
+.h4i {
+    color: #a5a8b6;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
-
   .enviar {
 	transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
   }
@@ -289,20 +307,6 @@ form legend {
 	transform: scale(1.05); /* Hace que el botón se agrande ligeramente cuando se hace clic */
   }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    background-color: #f9f9f9;
-    color: #333;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
 
 textarea {
     height: 150px; /* Ajusta la altura del área de texto */
@@ -325,20 +329,24 @@ input[type="submit"]:hover {
 
 
 @media screen and (max-width: 768px) {
+    form {
+        width: calc(100% - 40px); /* Reducir el ancho del formulario */
+        padding: 10px; /* Ajusta el relleno en dispositivos más pequeños */
+		background-color: #052D3D;
+    }
 
-	input[type="text"],
+    input[type="text"],
     input[type="email"],
     input[type="tel"],
     textarea {
-        width: calc(100% - 20px); /* Reduce el ancho para dar espacio al borde */
+        width: calc(100% - 20px); /* Reducir el ancho de los campos de entrada */
         margin-bottom: 15px;
     }
 
     input[type="submit"] {
         padding: 12px 16px;
         font-size: 14px;
-    }
-
+	}
 	.nav-menu {
 		background-color: #063647;
 	}
@@ -356,11 +364,11 @@ input[type="submit"]:hover {
 	}
 
 	.caja {
-		background-color: #fff;
+		background-color: #052D3D
 	}
 	
-
 }
+
 
 .nombre_principal {
 	display: flex;
